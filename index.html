@@ -1,7 +1,12 @@
+<!-- week 1 day 2 -->
 <!-- 1. build aboutme page that quizzes user on fun facts about who you are and where you came from -->
 <!-- 2. short bio, education history, job experience overview, goals -->
 <!-- 3. prompt user for 5 yes/no questions in JS; must accept y/n yes/no. alert user with response they provided -->
 <!-- 4. personalized welcome message to user from site owner via prompt(), display name back to user, display name back to user in final messsage to them -->
+
+<!-- week 1 day 3 -->
+<!-- 1. create top ten list at bottom of HTML -->
+<!-- 2. in JS, -->
 
 <!DOCTYPE html>
 <html>
@@ -20,18 +25,8 @@
       <h1>About Vik.</h1>
     </article>
     <article>
-      <img src=img/bioimage.JPG alt="Hiking" />
-      <img src=img/bioimage2.jpg alt="July 4th" />
-    </article>
-    <article id="navbarsize">
-      <nav>
-        <ul id="headernavalign">
-          <li class="headernav">Page 1 list header</li>
-          <li class="headernav">Page 2 list header</li>
-          <li class="headernav">Page 3 list header</li>
-          <li class="headernav">Page 4 list header</li>
-        </ul>
-      </nav>
+      <img src=img/bioimage.JPG alt="Hiking">
+      <img src=img/bioimage2.jpg alt="July 4th">
     </article>
   </header>
 
@@ -53,9 +48,6 @@
     </section>
     <hr class="pagehr" />
     <section class="sectionmargin">
-      <article id="jobtitle">
-        <h2><i>Job/Volunteer <br /> Experience</i></h2>
-      </article>
       <article id="jobdesc">
         <ul class="joblist">
           <li>x Software Developer at y Company (2020-current)</li>
@@ -63,12 +55,15 @@
           <li>Optometric Technician at Dr. Ambo & Associates (Jan-Oct 2018)</li>
           <br />
           <li>Volunteering:</li>
-          <ul class="joblist">
+          <ul class="joblist2">
             <li>Blood Drive (2018)</li>
             <li>Habitat for Humanity (2015)</li>
             <li>Evergreen Hospital (2010-2013)</li>
           </ul>
         </ul>
+      </article>
+      <article id="jobtitle">
+        <h2><i>Job/<br />Volunteer Experience</i></h2>
       </article>
     </section>
     <hr class="pagehr" />
@@ -96,22 +91,39 @@
         <h2><i>Fun Facts</i></h2>
       </article>
       <article id="factsdesc">
-        <p>I have a younger brother, who is 10 years younger. In my spare time, I enjoy working out, running, and
+        <p>I have a brother who is 10 years younger to me, that I care very much about. We hang out with my dog,
+          Spartan. In my spare time, I enjoy working out, running, and
           reading or
-          watching interesting articles or documentaries. To relax and let the stress fade out, I
-          play the guitar, create music through software, or watch Netflix. (Breaking Bad!) To socialize, I like going
+          watching interesting articles or documentaries.</p>
+        <p>To relax and let the stress fade out, I
+          play the guitar, create music through software, or watch Netflix (Breaking Bad!).</p>
+        <p>To socialize, I like
+          going
           over to friends' places for kickbacks, or hitting up the bars now and then to get out of the house.</p>
       </article>
     </section>
+    <hr class="pagehr" />
   </main>
 
-  <footer>
-    <article>
-      <ul id="footernavalign">
-        <li class="footernav"><a href="https://github.com/svakam/201aboutme">Repo for this website</a></li>
-        <li class="footernav"><a href="https://github.com/svakam">GitHub</a></li>
-        <li class="footernav"><a href="https://www.linkedin.com/in/svakam/">LinkedIn</a></li>
-        <li class="footernav"><a href="https://open.spotify.com/user/svakam?si=LMjwZs5pTx2ZhwNf3S3ayw">Spotify</a></li>
+  <footer id="footer">
+    <article id="projectbarsize">
+      <ul id="projectbaralign">
+        <li id="seenavbar" class="projectlist"><i>Project specifications</i></li>
+        <hr class="pagehr" />
+        <li class="projectlist"><a href="">Day 1</a></li>
+        <li class="projectlist"><a href="">Day 2</a></li>
+        <li class="projectlist"><a href="">Day 3</a></li>
+        <li class="projectlist"><a href="">Day 4</a></li>
+      </ul>
+    </article>
+    <article id="linkbarsize">
+      <ul id="linkbaralign">
+        <li class="linklist" id="seenavbar"><i>My online presence thus far</i></li>
+        <hr class="pagehr" />
+        <li class="linklist"><a href="https://github.com/svakam/201aboutme">Repo for this website</a></li>
+        <li class="linklist"><a href="https://github.com/svakam">My GitHub</a></li>
+        <li class="linklist"><a href="https://www.linkedin.com/in/svakam/">LinkedIn</a></li>
+        <li class="linklist"><a href="https://open.spotify.com/user/svakam?si=LMjwZs5pTx2ZhwNf3S3ayw">Spotify</a></li>
       </ul>
     </article>
   </footer>
