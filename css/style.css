@@ -1,8 +1,80 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
-  color: white;
+  color: lightgray;
+  /* border: solid;
+  border-color: darkgreen; testing only */
+}
+
+h1 {
+  text-align: center;
+  font-size: 300%;
 }
 
 body {
   background-color: black;
+}
+
+#headernavalign {
+  text-align: center;
+}
+
+.headernav {
+  display: inline;
+  margin: 20px;
+}
+
+#biotitle {
+  text-align: center;
+  float: left;
+  width: 30%;
+  padding: 10px;
+
+}
+
+#biodesc {
+  text-align: center;
+  padding: 5px;
+}
+
+#jobtitle {
+  text-align: center;
+  float: right;
+  width: 30%;
+}
+
+#jobdesc {
+  text-align: center;
+}
+
+.joblist {
+  display: inline-block; /*change to display tag*/
+}
+
+#goalstitle {
+  text-align: center;
+}
+
+#goalsdesc {
+  text-align: center;
+}
+
+#goalslist {
+  display: inline-block;/*change to display tag*/
+}
+
+#factstitle {
+ text-align: center;
+}
+
+#factsdesc {
+  text-align: center;
+}
+
+#footernavalign {
+  text-align: center;
+}
+
+.footernav {
+  display: inline;
+  margin: 20px;
 }
