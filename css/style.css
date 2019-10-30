@@ -1,21 +1,36 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
   color: lightgray;
+  margin-left: 10px;
+  margin-right: 10px;
   /* border: solid;
-  border-color: darkgreen; testing only */
+  border-color: darkgreen; */
+  /* border stuff for testing only */
 }
 
 h1 {
   text-align: center;
-  font-size: 300%;
+  font-size: 400%;
 }
 
 body {
   background-color: black;
+  font-size: 15pt;
+}
+
+img {
+  max-width: 60%;
+  min-width: 40%;
+  padding-left: 20%;
+  margin-bottom: 20px;
 }
 
 #headernavalign {
   text-align: center;
+}
+
+#navbarsize {
+  width: 100%;
 }
 
 .headernav {
@@ -23,8 +38,16 @@ body {
   margin: 20px;
 }
 
+.sectionmargin {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 #biotitle {
   text-align: center;
+  font-size: 140%;
   float: left;
   width: 30%;
   padding: 10px;
@@ -36,22 +59,32 @@ body {
   padding: 5px;
 }
 
+.pagehr {
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
 #jobtitle {
   text-align: center;
+  font-size: 140%;
   float: right;
   width: 30%;
+  padding: 10px;
 }
 
 #jobdesc {
   text-align: center;
+  width: 70%;
 }
 
 .joblist {
-  display: inline-block; /*change to display tag*/
+  display: block;
+  list-style-type: none;
 }
 
 #goalstitle {
   text-align: center;
+  font-size: 140%;
 }
 
 #goalsdesc {
@@ -59,11 +92,13 @@ body {
 }
 
 #goalslist {
-  display: inline-block;/*change to display tag*/
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 #factstitle {
  text-align: center;
+ font-size: 140%;
 }
 
 #factsdesc {

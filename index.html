@@ -6,17 +6,24 @@
 <!DOCTYPE html>
 <html>
 
+
 <head>
   <link href="css/style.css" rel="stylesheet" type="text/css" />
   <title>About Vik.</title>
 </head>
 
+
 <body>
+
   <header>
     <article>
       <h1>About Vik.</h1>
     </article>
     <article>
+      <img src=img/bioimage.jpg alt="Hiking" />
+      <img src=img/bioimage2.jpg alt="July 4th" />
+    </article>
+    <article id="navbarsize">
       <nav>
         <ul id="headernavalign">
           <li class="headernav">Page 1 list header</li>
@@ -27,28 +34,35 @@
       </nav>
     </article>
   </header>
+
   <main>
-    <section>
+    <section class="sectionmargin">
       <article id="biotitle">
         <h2><i>Biography</i></h2>
       </article>
       <article id="biodesc">
-        <p>Welcome to my Code 201 bio page! My name is Vik Akam, and I'm a long time Seattle resident. I graduated from
+        <p>Welcome to my Code 201 bio page! My name is Vik Akam, and I'm a long time Seattle resident. After I graduated
+          from
           the
-          University of Washington in 2016 with a degree in Biochemistry. It wasn't until around March of 2019 that I
-          re-aligned my interests, from health care and medicine, toward the computer science field. It's been a roller
+          University of Washington in 2016 with a BS in Biochemistry, it wasn't until around March of 2019 that I
+          re-aligned my interests - from health care and medicine, toward computer science and business. It's been a
+          roller
           coaster ride of both over-confident highs and gut-wrenching lows, but I'm ecstatic to see what challenges this
           transition beteween industries brings.</p>
       </article>
     </section>
-    <section>
+    <hr class="pagehr" />
+    <section class="sectionmargin">
       <article id="jobtitle">
-        <h2><i>Job/Volunteer Experience</i></h2>
+        <h2><i>Job/Volunteer <br /> Experience</i></h2>
       </article>
       <article id="jobdesc">
         <ul class="joblist">
+          <li>x Software Developer at y Company (2020-current)</li>
+          <br />
           <li>Optometric Technician at Dr. Ambo & Associates (Jan-Oct 2018)</li>
-          <li>Volunteer at:</li>
+          <br />
+          <li>Volunteering:</li>
           <ul class="joblist">
             <li>Blood Drive (2018)</li>
             <li>Habitat for Humanity (2015)</li>
@@ -57,26 +71,27 @@
         </ul>
       </article>
     </section>
-    <section>
+    <hr class="pagehr" />
+    <section class="sectionmargin">
       <article id="goalstitle">
         <h2><i>Goals</i></h2>
       </article>
       <article id="goalsdesc">
-        <ul id="goalslist">
-          <li>To learn a concrete number of languages that are relevant to the dream specialty I choose to work in. (So
-            far,
-            I have some knowledge in C, HTML, CSS, and JavaScript.)</li>
-          <li>Within the next year, to secure a stable job at a Seattle-based company, meet my own and employer's goals
+        <article id="goalslist">
+          <p>To learn a concrete number of languages that are relevant to the dream specialty I choose to work in
+            (current skills being improved upon are C, Python, HTML, CSS, and JavaScript).</p>
+          <p>Within the next year, to secure a stable job at a Seattle-based company, meet my own and employer's goals
             to
             advance the company, and save funds to further advance my education in CS or branch out to relevant study.
-          </li>
-          <li>Above all, to become a excellent software engineer and be able to manage large teams in software
+          </p>
+          <p>Above all, to become a excellent software engineer and be able to manage large teams in software
             development.
-          </li>
-        </ul>
+          </p>
+        </article>
       </article>
     </section>
-    <section>
+    <hr class="pagehr" />
+    <section class="sectionmargin">
       <article id="factstitle">
         <h2><i>Fun Facts</i></h2>
       </article>
@@ -84,10 +99,12 @@
         <p>I have a younger brother, who is 10 years younger. In my spare time, I enjoy working out, running, and
           reading or
           watching interesting articles or documentaries. To relax and let the stress fade out, I
-          play the guitar, create music through software, or watch Netflix. (Breaking Bad!)</p>
+          play the guitar, create music through software, or watch Netflix. (Breaking Bad!) To socialize, I like going
+          over to friends' places for kickbacks, or hitting up the bars now and then to get out of the house.</p>
       </article>
     </section>
   </main>
+
   <footer>
     <article>
       <ul id="footernavalign">
@@ -98,7 +115,10 @@
       </ul>
     </article>
   </footer>
+
   <script src="js/app.js"></script>
+
 </body>
+
 
 </html>
