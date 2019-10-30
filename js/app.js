@@ -94,4 +94,7 @@ else {
   alert("???");
 }
 
+// final message
+alert("Thanks for answering (or not answering) my questions, " + name + "! Enjoy my website.");
+
 
