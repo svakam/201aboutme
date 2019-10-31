@@ -236,136 +236,143 @@ numberGuesser();
 
 alert("Glad you got that out of the way, huh? Time for one last game.");
 
+function musicGuesser() {
+  // 7th question:
+  // multiple correct answers stored in an array
+  // 6 guesses allowed to guess correct answer
+  // ends when user guesses correct answer or if run out of attempts
+  // after, display all correct answers
 
+  alert("Question 7: This time, you're going to guess one of my top 10 favorite bands/artists.");
+  totalQuestions++;
 
-// 7th question:
-// multiple correct answers stored in an array
-// 6 guesses allowed to guess correct answer
-// ends when user guesses correct answer or if run out of attempts
-// after, display all correct answers
+  // initialize array of bands, guesses left, and flag to break out
+  var favoriteBandsList = ["The Beatles", "Jimi Hendrix", "Led Zeppelin", "Van Halen", "Queen", "Eric Clapton", "Tame Impala", "Elton John", "Billy Joel", "Muse"];
 
-alert("Question 7: This time, you're going to guess one of my top 10 favorite bands/artists.");
-totalQuestions++;
+  // 6 guesses
+  var bandGuessesLeft = 6;
 
-// initialize array of bands, guesses left, and flag to break out
-var favoriteBandsList = ["The Beatles", "Jimi Hendrix", "Led Zeppelin", "Van Halen", "Queen", "Eric Clapton", "Tame Impala", "Elton John", "Billy Joel", "Muse"];
-
-// 6 guesses
-var bandGuessesLeft = 6;
-
-// testing array has string values
-console.log("array band list length: " + favoriteBandsList.length);
-for (var i = 0; i < favoriteBandsList.length; i++) {
-  console.log("band name at array[" + i + "]: " + favoriteBandsList[i]);
-}
-
-// set flag to false
-var correctGuessExit = false;
-
-do {
-
-  // prompt for favorite band
-  var guessBand = prompt("What's one of my favorite bands/artists? " + bandGuessesLeft + " guesses remaining. Capitalization and formatting matter!");
-  console.log("guessed band name: " + guessBand);
-
-  // lowercase input string for checking answer
-  var guessBandLowerCase = guessBand.toLowerCase();
-
-  // more initializing variables
-  var favoriteBandLowerCase;
-
-  // run through array to check string match between guess and array; if match, switch flag to true and break out; else try again and increment guesses
+  // testing array has string values
+  console.log("array band list length: " + favoriteBandsList.length);
   for (var i = 0; i < favoriteBandsList.length; i++) {
+    console.log("band name at array[" + i + "]: " + favoriteBandsList[i]);
+  }
 
-    var ithBand = favoriteBandsList[i];
-    favoriteBandLowerCase = ithBand.toLowerCase();
+  // set flag to false
+  var correctGuessExit = false;
 
-    console.log(".tolowercase applied to ith band: " + ithBand.toLowerCase());
-    console.log("variable favoriteBandLowerCase for lower cased favorite band[i]: " + favoriteBandLowerCase);
-    console.log("flag before check: " + correctGuessExit);
+  do {
 
-    if (guessBandLowerCase === favoriteBandLowerCase) {
+    // prompt for favorite band
+    var guessBand = prompt("What's one of my favorite bands/artists? " + bandGuessesLeft + " guesses remaining. Capitalization and formatting matter!");
+    console.log("guessed band name: " + guessBand);
 
-      correctGuessExit = true;
-      console.log("response correct: flag changed to " + correctGuessExit);
+    // lowercase input string for checking answer
+    var guessBandLowerCase = guessBand.toLowerCase();
 
-      alert("NICE! I love " + favoriteBandsList[i] + ". Rock on!");
-      console.log("array match: " + favoriteBandsList[i]);
+    // more initializing variables
+    var favoriteBandLowerCase;
 
-      scoreCounter++;
-      console.log("score: " + scoreCounter);
+    // run through array to check string match between guess and array; if match, switch flag to true and break out; else try again and increment guesses
+    for (var i = 0; i < favoriteBandsList.length; i++) {
 
+      var ithBand = favoriteBandsList[i];
+      favoriteBandLowerCase = ithBand.toLowerCase();
+
+      console.log(".tolowercase applied to ith band: " + ithBand.toLowerCase());
+      console.log("variable favoriteBandLowerCase for lower cased favorite band[i]: " + favoriteBandLowerCase);
+      console.log("flag before check: " + correctGuessExit);
+
+      if (guessBandLowerCase === favoriteBandLowerCase) {
+
+        correctGuessExit = true;
+        console.log("response correct: flag changed to " + correctGuessExit);
+
+        alert("NICE! I love " + favoriteBandsList[i] + ". Rock on!");
+        console.log("array match: " + favoriteBandsList[i]);
+
+        scoreCounter++;
+        console.log("score: " + scoreCounter);
+
+        break;
+
+      }
+    }
+
+    // if flag is changed to true, break out of do-while; else redo the loop
+    if (correctGuessExit === true) {
+      console.log("break out of do-while because flag is: " + correctGuessExit);
       break;
-
-    }
-  }
-
-  // if flag is changed to true, break out of do-while; else redo the loop
-  if (correctGuessExit === true) {
-    console.log("break out of do-while because flag is: " + correctGuessExit);
-    break;
-  }
-
-  else {
-
-    bandGuessesLeft--;
-
-    // if guesses > 0, redo the loop
-    if (bandGuessesLeft !== 0) {
-      alert("Nope, try again!");
-
-      console.log("guesses left nope try again: " + bandGuessesLeft);
     }
 
-    // if out of guesses, break out of loop
-    if (bandGuessesLeft === 0) {
-      alert("Sorry, out of guesses!");
+    else {
 
-      console.log("guesses left sorry out of guesses: " + bandGuessesLeft);
-      break;
+      bandGuessesLeft--;
+
+      // if guesses > 0, redo the loop
+      if (bandGuessesLeft !== 0) {
+        alert("Nope, try again!");
+
+        console.log("guesses left nope try again: " + bandGuessesLeft);
+      }
+
+      // if out of guesses, break out of loop
+      if (bandGuessesLeft === 0) {
+        alert("Sorry, out of guesses!");
+
+        console.log("guesses left sorry out of guesses: " + bandGuessesLeft);
+        break;
+      }
+
     }
 
   }
+  while (bandGuessesLeft > 0 && favoriteBandLowerCase !== guessBandLowerCase);
 
+
+  // display top 10 bands
+  // for loop iterating through array, access each element 0-9
+  // store ith element of array in a variable
+  // concatenate that variable to an empty list
+  // repeat until i is at 10th string
+  // if on the very first iteration, add the first element to the empty list
+  // if on any iteration except the 2nd to last and, just add commas after the current list
+  // if on the 2nd to last iteration, add an "and" after the current list
+  // when on the last iteration, add the last band to the list and a period
+
+
+  var listOfBandsSoFar = "";
+  console.log("initialize list of bands: " + listOfBandsSoFar);
+  for (var i = 0; i < favoriteBandsList.length; i++) {
+    var currentElementInArray = favoriteBandsList[i];
+
+    if (i === 0) {
+      listOfBandsSoFar = listOfBandsSoFar + currentElementInArray;
+      console.log("listOfBandsSoFar at " + i + "th iteration: " + listOfBandsSoFar);
+      continue;
+    }
+
+    else if (i === (favoriteBandsList.length - 1)) {
+      listOfBandsSoFar = listOfBandsSoFar + " and " + currentElementInArray + ".";
+      console.log("listOfBandsSoFar at " + i + "th iteration: " + listOfBandsSoFar);
+      continue;
+    }
+
+    else if (i < favoriteBandsList.length && i !== favoriteBandsList.length) {
+      listOfBandsSoFar = listOfBandsSoFar + ", " + currentElementInArray;
+      console.log("listOfBandsSoFar at " + i + "th iteration: " + listOfBandsSoFar);
+      continue;
+    }
+  }
+  alert("My 10 favorite bands are: " + listOfBandsSoFar);
 }
-while (bandGuessesLeft > 0 && favoriteBandLowerCase !== guessBandLowerCase);
+
+musicGuesser();
 
 
-// display top 10 bands
-// for loop iterating through array, access each element 0-9
-// store ith element of array in a variable
-// concatenate that variable to an empty list
-// repeat until i is at 10th string
-// if on the very first iteration, add the first element to the empty list
-// if on any iteration except the 2nd to last and, just add commas after the current list
-// if on the 2nd to last iteration, add an "and" after the current list
-// when on the last iteration, add the last band to the list and a period
 
 
-var listOfBandsSoFar = "";
-console.log("initialize list of bands: " + listOfBandsSoFar);
-for (var i = 0; i < favoriteBandsList.length; i++) {
-  var currentElementInArray = favoriteBandsList[i];
 
-  if (i === 0) {
-    listOfBandsSoFar = listOfBandsSoFar + currentElementInArray;
-    console.log("listOfBandsSoFar at " + i + "th iteration: " + listOfBandsSoFar);
-    continue;
-  }
-
-  else if (i === (favoriteBandsList.length - 1)) {
-    listOfBandsSoFar = listOfBandsSoFar + " and " + currentElementInArray + ".";
-    console.log("listOfBandsSoFar at " + i + "th iteration: " + listOfBandsSoFar);
-    continue;
-  }
-
-  else if (i < favoriteBandsList.length && i !== favoriteBandsList.length) {
-    listOfBandsSoFar = listOfBandsSoFar + ", " + currentElementInArray;
-    console.log("listOfBandsSoFar at " + i + "th iteration: " + listOfBandsSoFar);
-    continue;
-  }
-}
-alert("My 10 favorite bands are: " + listOfBandsSoFar);
 
 // display points earned out of total points
 alert("You got " + scoreCounter + "/" + totalQuestions + " right.");
