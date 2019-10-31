@@ -19,3 +19,5 @@ MIT open-source.
 - Github user jxson for what to include in /README.md: https://gist.github.com/jxson/1784669
 
 
+For questions 6 and 7 only;
+Cindy was the driver and Vic was the navigator
