@@ -158,61 +158,79 @@ alert("Thanks for answering (or not answering) my questions, " + name + "! Enjoy
 // after attempts exhausted, tell user correct answer
 
 // prep for question 6
+
+
+
+
 alert("Wait, I almost forgot! Time for some guessing games! >:) Question 6: You have 4 guesses to guess a number from a random number generator.")
 totalQuestions++;
 
-// initialize some variables for prepping guessing number game: guessesleft, guessnumber, correctnumber
-var guessesLeft = 4;
-var guessNumber;
-var correctNumber;
 
-// generate random float, multiply by 10, and round down to generate random number
-var randomNumberZeroToOne = Math.random();
-console.log("Random number 0-1 generated: " + randomNumberZeroToOne);
-correctNumber = Math.ceil((10 * (randomNumberZeroToOne)));
-console.log("Correct number: " + correctNumber);
 
-// prompt user at least once for a guess
-do {
 
-  // prompt for input
-  guessNumber = prompt("Take your guess! 1-10 only");
 
-  // convert number to integer
-  guessNumber = parseInt(guessNumber);
-  console.log("guessNumber: " + guessNumber);
+function numberGuesser() {
+  console.log(guessNumber)
+  // initialize some variables for prepping guessing number game: guessesleft, guessnumber, correctnumber
+  var guessesLeft = 4;
+  var guessNumber;
+  var correctNumber;
 
-  // if guess too low, alert too low and increment guesses, if guess too high, alert too high and increment guesses, if NaN, alert ?, else alert correct and break out of do/while
-  if (guessNumber < correctNumber) {
-    guessesLeft--;
-    alert("Too low! " + guessesLeft + " guesses remaining.");
-    console.log("guesses left: " + guessesLeft);
+  // generate random float, multiply by 10, and round down to generate random number
+
+  var randomNumberZeroToOne = Math.random();
+  console.log("Random number 0-1 generated: " + randomNumberZeroToOne);
+  correctNumber = Math.ceil((10 * (randomNumberZeroToOne)));
+  console.log("Correct number: " + correctNumber);
+
+  // prompt user at least once for a guess
+  do {
+
+    // prompt for input
+    guessNumber = prompt("Take your guess! 1-10 only");
+
+    // convert number to integer
+    guessNumber = parseInt(guessNumber);
+    console.log("guessNumber: " + guessNumber);
+
+    // if guess too low, alert too low and increment guesses, if guess too high, alert too high and increment guesses, if NaN, alert ?, else alert correct and break out of do/while
+    if (guessNumber < correctNumber) {
+      guessesLeft--;
+      alert("Too low! " + guessesLeft + " guesses remaining.");
+      console.log("guesses left: " + guessesLeft);
+    }
+    else if (guessNumber > correctNumber) {
+      guessesLeft--;
+      alert("Too high! " + guessesLeft + " guesses remaining.");
+      console.log("guesses left: " + guessesLeft);
+    }
+    else if (Number.isNaN(guessNumber) === true) {
+      guessesLeft--;
+      alert("??? " + guessesLeft + " guesses remaining.");
+      console.log("guesses left: " + guessesLeft);
+    }
+    // correct
+    else {
+      alert("NICE GUESS!!! It was " + guessNumber + ". 5 points to Gryffindor!!");
+      scoreCounter++;
+      console.log("score: " + scoreCounter);
+      break;
+    }
+
+    if (guessesLeft === 0) {
+      alert("Sorry! Out of guesses. The correct number is " + correctNumber);
+      break;
+    }
+
   }
-  else if (guessNumber > correctNumber) {
-    guessesLeft--;
-    alert("Too high! " + guessesLeft + " guesses remaining.");
-    console.log("guesses left: " + guessesLeft);
-  }
-  else if (Number.isNaN(guessNumber) === true) {
-    guessesLeft--;
-    alert("??? " + guessesLeft + " guesses remaining.");
-    console.log("guesses left: " + guessesLeft);
-  }
-  // correct
-  else {
-    alert("NICE GUESS!!! It was " + guessNumber + ". 5 points to Gryffindor!!");
-    scoreCounter++;
-    console.log("score: " + scoreCounter);
-    break;
-  }
-
-  if (guessesLeft === 0) {
-    alert("Sorry! Out of guesses. The correct number is " + correctNumber);
-    break;
-  }
-
+  while (guessNumber !== correctNumber && guessesLeft > 0);
 }
-while (guessNumber !== correctNumber && guessesLeft > 0);
+numberGuesser();
+
+
+
+
+
 
 
 
