@@ -4,6 +4,8 @@
 ### Code Example
 - Week 1, Day 2: simple if/else statements with prompt(); and alert(); practice. 
 - Week 1, Day 3: for/while loops, increment where needed
+- Week 1, Day 4: practiced forking/PR GitHub, implemented very basic functions
+- Weke 1, Day 5: CSS practice
 
 ### Motivation
 - Besides doing this for Code 201, I want to practice making skeleton websites and JS quickly and easily. 
